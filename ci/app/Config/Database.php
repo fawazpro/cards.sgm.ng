@@ -31,7 +31,7 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
+		'hostname' => '',
 		'username' => '',
 		'password' => '',
 		'database' => '',
@@ -109,12 +109,12 @@ class Database extends \CodeIgniter\Database\Config
 		// Ensure that we always set the database group to 'tests' if
 		// we are currently running an automated test suite, so that
 		// we don't overwrite live data on accident.
-		if (ENVIRONMENT === 'development')
-		{
-			$this->defaultGroup = 'dev';
-		} else if(ENVIRONMENT === 'production'){
-			$this->defaultGroup = 'default';
-		}
+		// if (ENVIRONMENT === 'development')
+		// {
+		// 	$this->defaultGroup = 'dev';
+		// } else if(ENVIRONMENT === 'production'){
+		// 	$this->defaultGroup = 'default';
+		// }
 			// Under Travis-CI, we can set an ENV var named 'DB_GROUP'
 			// so that we can test against multiple databases.
 			// if ($group = getenv('DB'))
