@@ -1,17 +1,18 @@
 <?php
+
 namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Users extends Model
+class Designs extends Model
 {
-    protected $table      = 'users';
+    protected $table      = 'design';
     protected $primaryKey = 'id';
 
     protected $returnType = 'array';
     protected $useSoftDeletes = true;
 
-    protected $allowedFields = ['user','clearance','name','cards'];
+    protected $allowedFields = ['business', 'design', 'source_code'];
 
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
