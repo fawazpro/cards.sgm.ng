@@ -87,7 +87,7 @@ class Pages extends BaseController
     
 	public function designs()
 	{
-        $design = new \App\Models\designs();
+        $design = new \App\Models\Designs();
         $incoming = $this->request->getGet();
 
         $id = $incoming['sku'];
